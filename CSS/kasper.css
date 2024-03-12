@@ -1,4 +1,9 @@
+/* start variables */
+:root{
+    --main-color: #19c8fa;
+}
 
+/* end variables */
 /* start global rules */
 *{
     -moz-box-sizing: border-box;
@@ -15,7 +20,7 @@ html{
 
 body{
     font-family: "Open Sans", sans-serif;
-    background-color: black;
+    background-color: #588157;
 }
 
 ul{
@@ -79,9 +84,48 @@ header .logo img{
 
 header nav{
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
+header nav ul{
+    display: flex;
+}
 
+header nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 40px 10px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 3;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+header nav .form{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header nav .form i{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
 
 
 
